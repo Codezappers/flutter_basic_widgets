@@ -15,9 +15,13 @@ class MainApp extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: Colors.blue,
           title: const Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text("My App"),
+              FlutterLogo(size: 40),
+              Icon(
+                Icons.notifications, 
+                size: 30
+                ),
             ],
           ),
         ),
@@ -37,6 +41,7 @@ class MainApp extends StatelessWidget {
                 leading: Icon(Icons.home),
                 title: Text('Home'),
                 onTap: null, // Add your onTap function here
+
               ),
               ListTile(
                 leading: Icon(Icons.settings),
@@ -59,23 +64,25 @@ class MainApp extends StatelessWidget {
         ),
 
         bottomNavigationBar: const BottomAppBar(
-            color: Colors.grey,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 IconButton(
                   iconSize: 30,
                   icon: Icon(Icons.home),
+                  color: Colors.black,
                   onPressed: null,
                 ),
                 IconButton(
                   iconSize: 30,
                   icon: Icon(Icons.search),
+                  color: Colors.black,
                   onPressed: null,
                 ),
                 IconButton(
                   iconSize: 30,
                   icon: Icon(Icons.add),
+                  color: Colors.black,
                   onPressed: null,
                 ),
               ],
